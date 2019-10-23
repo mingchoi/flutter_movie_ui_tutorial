@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:movie_ui_sample/widget/ImageViewer.dart';
 import 'model/Movie.dart';
 
 class PhotoGallery extends StatelessWidget {
@@ -22,10 +23,22 @@ class PhotoGallery extends StatelessWidget {
             height: 120,
             child: ListView.separated(
               scrollDirection: Axis.horizontal,
-              itemBuilder: (ctx, i) => ClipRRect(
-                borderRadius: BorderRadius.circular(8.0),
-                child: Image(
-                    image: NetworkImage(movie.photos[i].thumbnail)),
+              itemBuilder: (ctx, i) => GestureDetector(
+                child: ClipRRect(
+                  borderRadius: BorderRadius.circular(8.0),
+                  child: Hero(
+                      tag: movie.photos[i].url,
+                      child: Image(
+                          image: NetworkImage(movie.photos[i].thumbnail))),
+                ),
+                onTap: () {
+                  Navigator.of(context).push(
+                    PageRouteBuilder(
+                        opaque: false,
+                        pageBuilder: (context, _, __) =>
+                            ImageViewer(url: movie.photos[i].url)),
+                  );
+                },
               ),
               separatorBuilder: (ctx, i) => SizedBox(width: 8),
               itemCount: movie.photos.length,
@@ -36,4 +49,3 @@ class PhotoGallery extends StatelessWidget {
     );
   }
 }
-
