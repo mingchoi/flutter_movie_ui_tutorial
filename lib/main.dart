@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'ActorList.dart';
 import 'PhotoGallery.dart';
 import 'StoryDescription.dart';
 import 'data/MovieRepo.dart';
@@ -22,7 +23,7 @@ class MyApp extends StatelessWidget {
             Placeholder(fallbackHeight: 310),
             StoryDescription(movie: movie),
             PhotoGallery(movie: movie),
-            Placeholder(fallbackHeight: 200),
+            ActorList(movie: movie),
           ],
         ),
       ),
