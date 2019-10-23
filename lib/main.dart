@@ -20,12 +20,60 @@ class MyApp extends StatelessWidget {
       home: Scaffold(
         body: ListView(
           children: <Widget>[
-            Placeholder(fallbackHeight: 310),
+            MovieHeader(movie: movie),
             StoryDescription(movie: movie),
             PhotoGallery(movie: movie),
             ActorList(movie: movie),
           ],
         ),
+      ),
+    );
+  }
+}
+
+class MovieHeader extends StatelessWidget {
+  const MovieHeader({
+    Key key,
+    @required this.movie,
+  }) : super(key: key);
+
+  final Movie movie;
+
+  @override
+  Widget build(BuildContext context) {
+    return SizedBox(
+      height: 310,
+      child: Stack(
+        children: <Widget>[
+          Image(
+            fit: BoxFit.cover,
+            image: NetworkImage(movie.backdrop),
+            width: MediaQuery.of(context).size.width,
+            height: 190,
+          ),
+          Positioned(
+            left: 16,
+            top: 140,
+            child: Image(
+              fit: BoxFit.cover,
+              image: NetworkImage(movie.poster),
+              width: 120,
+              height: 160,
+            ),
+          ),
+          Positioned(
+            left: 152,
+            top: 200,
+            child: Column(children: <Widget>[
+              Text(movie.title, style: Theme.of(context).textTheme.headline),
+              Row(children: <Widget>[
+                Chip(label: Text("hello")),
+                SizedBox(width: 8),
+                Chip(label: Text("world")),
+              ]),
+            ]),
+          ),
+        ],
       ),
     );
   }
