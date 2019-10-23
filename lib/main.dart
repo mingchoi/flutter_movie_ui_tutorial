@@ -30,7 +30,41 @@ class MyApp extends StatelessWidget {
                 ],
               ),
             ),
-            Placeholder(fallbackHeight: 200),
+            Padding(
+              padding: const EdgeInsets.symmetric(vertical: 8, horizontal: 16),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: <Widget>[
+                  Text("Photos", style: Theme.of(context).textTheme.title),
+                  SizedBox(height: 8),
+                  Container(
+                    height: 120,
+                    child: ListView(
+                      scrollDirection: Axis.horizontal,
+                      children: <Widget>[
+                        ClipRRect(
+                          borderRadius: BorderRadius.circular(8.0),
+                          child: Image(
+                              image: NetworkImage(movie.photos[0].thumbnail)),
+                        ),
+                        SizedBox(width: 8),
+                        ClipRRect(
+                          borderRadius: BorderRadius.circular(8.0),
+                          child: Image(
+                              image: NetworkImage(movie.photos[1].thumbnail)),
+                        ),
+                        SizedBox(width: 8),
+                        ClipRRect(
+                          borderRadius: BorderRadius.circular(8.0),
+                          child: Image(
+                              image: NetworkImage(movie.photos[2].thumbnail)),
+                        ),
+                      ],
+                    ),
+                  ),
+                ],
+              ),
+            ),
             Placeholder(fallbackHeight: 200),
           ],
         ),
