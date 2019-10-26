@@ -31,7 +31,7 @@ dependencies:
   bloc: ^0.14.0
   flutter_bloc: ^0.20.0
   ```
-#### 3. Click `Get Dependency` on the top the download the them
+#### 3. Click `Get Dependency` on the top to install them
 
 #### 4. Copy these folders to your project
 - lib/bloc
