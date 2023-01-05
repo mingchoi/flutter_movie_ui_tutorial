@@ -4,10 +4,10 @@ This project is made for a workshop in Google Developer Group Hong Kong back in 
 
 It show a detailed steps for making a Flutter UI for movie description.
 
-[https://www.meetup.com/gdg-hong-kong/events/265650639/](https://www.meetup.com/gdg-hong-kong/events/265650639/)
+Workshop link: [https://www.meetup.com/gdg-hong-kong/events/265650639/](https://www.meetup.com/gdg-hong-kong/events/265650639/)
 
 
-
+Preview:
 
 <img src="https://github.com/mingchoi/flutter_movie_ui_tutorial/blob/master/preview.jpg" width="301" height="640">
 
