@@ -1,6 +1,13 @@
 # movie_ui_sample
 
-An example for building a UI for movie description.
+This project is made for a workshop in Google Developer Group Hong Kong back in 2019.
+
+It show a detailed steps for making a Flutter UI for movie description.
+
+[https://www.meetup.com/gdg-hong-kong/events/265650639/](https://www.meetup.com/gdg-hong-kong/events/265650639/)
+
+
+
 
 <img src="https://github.com/mingchoi/flutter_movie_ui_tutorial/blob/master/preview.jpg" width="301" height="640">
 
